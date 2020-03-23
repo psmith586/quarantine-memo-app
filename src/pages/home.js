@@ -21,7 +21,7 @@ class home extends Component{
 
   render () {
     let recentMemosMarkup = this.state.memos ? (
-      this.state.memos.map((memo) => <Memo memo={memo} />)
+      this.state.memos.map((memo) => <Memo key={memo.memoID} memo={memo} />)
     ) : <p>loading...</p>
     return (
       <Grid container spacing={16}>
